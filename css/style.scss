@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("/images/bg-pattern-top-desktop.svg") no-repeat top left,
+    url("/images/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > main {
+    > section {
+      max-width: 1400px;
+
+      //   grid section 1 css design
+      > .grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .texts {
+          > h1 {
+            color: red;
+          }
+        }
+        > .ratings {
+          display: flex;
+          flex-direction: column;
+          > div {
+            display: flex;
+          }
+        }
+      }
+
+      //   grid section 2 css design
+      > .grid2 {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+
+        // this div is indecate all card section these color is maroon
+        > div {
+          border-radius: 10px;
+          padding: 42px 30px;
+          background-color: #511f50;
+          > .card-img {
+            > img {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/images/bg-pattern-top-desktop.svg") no-repeat top left, url("/images/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body > main > section {
+  max-width: 1400px;
+}
+body > main > section > .grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+body > main > section > .grid1 > .texts > h1 {
+  color: red;
+}
+body > main > section > .grid1 > .ratings {
+  display: flex;
+  flex-direction: column;
+}
+body > main > section > .grid1 > .ratings > div {
+  display: flex;
+}
+body > main > section > .grid2 {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+body > main > section > .grid2 > div {
+  border-radius: 10px;
+  padding: 42px 30px;
+  background-color: #511f50;
+}
+body > main > section > .grid2 > div > .card-img > img {
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
