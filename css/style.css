@@ -15,7 +15,7 @@ body {
   font-family: "League Spartan", sans-serif;
 }
 body > main {
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 body > main > section {
   max-width: 1200px;
@@ -111,10 +111,17 @@ body > main > section > .grid2 > div > .card-pera > p {
   line-height: 21px;
   margin-top: 25px;
 }
+body > main > section > .grid2 > :nth-child(2) {
+  transform: translateY(16px);
+}
+body > main > section > .grid2 > :nth-child(3) {
+  transform: translateY(32px);
+}
 body > footer {
   color: #7f757e;
   text-align: center;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 body > footer > a {
   text-decoration: none;
@@ -200,11 +207,18 @@ body > footer > a {
   }
   body > main > section > .grid2 {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-columns: repeat(1, 1fr);
+  }
+  body > main > section > .grid2 > :nth-child(2) {
+    transform: translateY(0px);
+  }
+  body > main > section > .grid2 > :nth-child(3) {
+    transform: translateY(0px);
   }
   body > footer {
     margin: 0px 18px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (min-width: 800px) and (max-width: 899px) {
