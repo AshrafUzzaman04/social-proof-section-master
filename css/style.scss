@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+// default view style
 body {
   background: url("/images/bg-pattern-top-desktop.svg") no-repeat top left,
     url("/images/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
@@ -11,26 +15,67 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "League Spartan", sans-serif;
 
   > main {
+    margin-bottom: 20px;
     > section {
-      max-width: 1400px;
+      max-width: 1200px;
+      margin: 0 30px;
 
       //   grid section 1 css design
       > .grid1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
 
         > .texts {
+          margin-right: 150px;
           > h1 {
-            color: red;
+            color: #541f55;
+            font-size: 60px;
+            letter-spacing: -2px;
+            margin-bottom: 30px;
+          }
+          > p {
+            color: #7f757e;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
           }
         }
         > .ratings {
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
           > div {
             display: flex;
+            margin: 8px 0;
+            border-radius: 10px;
+            background-color: #f7f2f8;
+            width: 450px;
+            padding: 20px 30px;
+            > div {
+              display: grid;
+              grid-gap: 7px;
+              grid-template-columns: repeat(5, 1fr);
+              margin-right: 32px;
+            }
+            > span {
+              color: #541f55;
+              font-weight: 700;
+              font-size: 18px;
+            }
+          }
+          > :nth-child(1) {
+            align-self: flex-start;
+          }
+          > :nth-child(2) {
+            align-self: center;
+          }
+          > :nth-child(3) {
+            align-self: flex-end;
           }
         }
       }
@@ -47,9 +92,280 @@ body {
           padding: 42px 30px;
           background-color: #511f50;
           > .card-img {
+            display: flex;
             > img {
               border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              margin-right: 22px;
             }
+            > div {
+              display: flex;
+              flex-direction: column;
+              line-height: 20px;
+              > .span1 {
+                color: hsl(0, 0%, 100%);
+                font-weight: 500;
+              }
+              > .span2 {
+                color: #cf7eb5;
+              }
+            }
+          }
+          > .card-pera {
+            > p {
+              color: hsl(0, 0%, 100%);
+              line-height: 21px;
+              margin-top: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // footer sction style here
+  > footer {
+    color: #7f757e;
+    text-align: center;
+    font-size: 18px;
+    > a {
+      text-decoration: none;
+      color: #cf7eb5;
+      font-weight: 600;
+    }
+  }
+}
+
+// mobile and tab view
+@media only screen and (min-width: 0px) and (max-width: 799px) {
+  body {
+    background: url("/images/bg-pattern-top-mobile.svg") no-repeat top left,
+      url("/images/bg-pattern-bottom-mobile.svg") no-repeat right bottom;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+
+    > main {
+      margin-bottom: 20px;
+      > section {
+        max-width: 1200px;
+        margin: 50px 20px 0;
+
+        //   grid section 1 css design
+        > .grid1 {
+          display: grid;
+          grid-gap: 30px;
+          grid-template-columns: repeat(1, 1fr);
+          margin-bottom: 40px;
+
+          > .texts {
+            margin: auto;
+            text-align: center;
+            > h1 {
+              color: #541f55;
+              font-size: 50px;
+              letter-spacing: -2px;
+              margin-bottom: 30px;
+            }
+            > p {
+              color: #7f757e;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 23px;
+            }
+          }
+          > .ratings {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            > div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin: 8px 0;
+              border-radius: 10px;
+              background-color: #f7f2f8;
+              width: 100%;
+              > div {
+                display: flex;
+                grid-template-columns: repeat(5, 1fr);
+                margin-right: 0px;
+                margin-bottom: 14px;
+              }
+              > span {
+                color: #541f55;
+                font-weight: 700;
+                font-size: 18px;
+              }
+            }
+            > :nth-child(1) {
+              align-self: center;
+            }
+            > :nth-child(2) {
+              align-self: center;
+            }
+            > :nth-child(3) {
+              align-self: center;
+            }
+          }
+        }
+
+        //   grid section 2 css design
+        > .grid2 {
+          display: grid;
+          grid-gap: 30px;
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+    > footer {
+      margin: 0px 18px;
+    }
+  }
+}
+
+// tab and laptop view
+@media only screen and (min-width: 800px) and (max-width: 899px) {
+  body {
+    background: url("/images/bg-pattern-top-desktop.svg") no-repeat top left,
+      url("/images/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+
+    > main {
+      margin-bottom: 20px;
+      > section {
+        max-width: 1200px;
+        margin: 50px 30px;
+
+        //   grid section 1 css design
+        > .grid1 {
+          display: grid;
+          grid-gap: 30px;
+          grid-template-columns: repeat(1, 1fr);
+          margin-bottom: 60px;
+
+          > .texts {
+            margin: auto;
+            text-align: center;
+            > h1 {
+              color: #541f55;
+              font-size: 60px;
+              letter-spacing: -2px;
+              margin-bottom: 30px;
+            }
+            > p {
+              color: #7f757e;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 23px;
+              padding: 0px 100px;
+            }
+          }
+          > .ratings {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > div {
+              display: flex;
+              margin: 8px 0;
+              border-radius: 10px;
+              background-color: #f7f2f8;
+              width: 450px;
+              padding: 20px 30px;
+              > div {
+                display: grid;
+                grid-gap: 7px;
+                grid-template-columns: repeat(5, 1fr);
+                margin-right: 32px;
+              }
+              > span {
+                color: #541f55;
+                font-weight: 700;
+                font-size: 18px;
+              }
+            }
+            > :nth-child(1) {
+              align-self: flex-start;
+            }
+            > :nth-child(2) {
+              align-self: center;
+            }
+            > :nth-child(3) {
+              align-self: flex-end;
+            }
+          }
+        }
+
+        //   grid section 2 css design
+        > .grid2 {
+          display: grid;
+          grid-gap: 30px;
+          grid-template-columns: repeat(3, 1fr);
+
+          // this div is indecate all card section these color is maroon
+          > div {
+            border-radius: 10px;
+            padding: 42px 30px;
+            background-color: #511f50;
+            > .card-img {
+              display: flex;
+              > img {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 22px;
+              }
+              > div {
+                display: flex;
+                flex-direction: column;
+                line-height: 20px;
+                > .span1 {
+                  color: hsl(0, 0%, 100%);
+                  font-weight: 500;
+                }
+                > .span2 {
+                  color: #cf7eb5;
+                }
+              }
+            }
+            > .card-pera {
+              > p {
+                color: hsl(0, 0%, 100%);
+                line-height: 21px;
+                margin-top: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// medium laptop and desktop view
+@media only screen and (min-width: 900px) and (max-width: 1040px) {
+  body {
+    > main {
+      > section {
+        margin: 20px 30px;
+
+        //   grid section 1 css design
+        > .grid1 {
+          > .texts {
+            margin-right: 50px;
           }
         }
       }
